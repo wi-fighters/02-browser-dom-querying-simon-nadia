@@ -27,10 +27,15 @@ function colorGenerator() {
 }
 
 //assigning a random color to each list item
-const listItems = document.querySelectorAll("li");
+const listItems = document.querySelectorAll(".food-item");
 console.log(listItems);
 let number = listItems.length
 for (let i = 0; i < listItems.length; i++) {
     listItems[i].style.color = colorGenerator();
 }
 
+//
+const allergyItems = document.querySelectorAll(".allergy-info:nth-child(2n)");
+allergyItems.forEach(item => {
+    item.style.backgroundColor = "grey";
+})
