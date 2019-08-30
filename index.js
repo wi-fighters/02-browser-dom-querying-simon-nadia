@@ -83,8 +83,7 @@ footer.style.flexFlow = "row wrap";
 footer.style.justifyContent = "center";
 
 const description = document.querySelectorAll(".food-desc");
-description.forEach(footerDesc => {
-  let desc = footerDesc.style;
+description.forEach(({ style: desc }) => {
   desc.border = "5px solid orange";
   desc.borderRadius = "100%";
   desc.height = "7rem";
