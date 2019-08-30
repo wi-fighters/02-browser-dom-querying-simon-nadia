@@ -13,13 +13,11 @@ mainSection.style.justifyContent = "space-around"
 
 //change styling of h2 elements
 const menuCategories = document.querySelectorAll(".category");
-for (let i = 0; i < menuCategories.length; i++) {
-    category = menuCategories[i].style;
-    category.fontStyle = "italic"
+menuCategories.forEach(({ style: category }) => {
+  category.fontStyle = "italic";
     category.fontSize = "2rem";
     category.borderBottom = "1px solid black";
-}
-console.log(menuCategories);
+});
 
 //change font size of warning at bottom of page
 let warning = document.getElementById("warning");
@@ -29,7 +27,7 @@ warning.style.marginLeft = "1.5rem";
 
 //color generator
 function colorGenerator() {
-    let letters = '0123456789ABCDEF';
+  let letters = "0123456789ABCDEF";
     let randomColor = "#";
     for (let j = 0; j < 6; j++) {
         randomColor += letters[Math.floor(Math.random() * 16)];
@@ -40,18 +38,21 @@ function colorGenerator() {
 
 //assigning a random color to each list item
 const foodCategories = document.querySelectorAll(".food-category");
-for (let i = 0; i < foodCategories.length; i++) {
-    let categories = foodCategories[i].style;
-    categories.backgroundColor = colorGenerator();
-    categories.width = "20rem";
-    categories.height = "10rem";
-    categories.margin = "1rem";
-}
+
+foodCategories.forEach(({ style: categoryBox }) => {
+  categoryBox.backgroundColor = colorGenerator();
+  categoryBox.width = "30%";
+  categoryBox.height = "10rem";
+  categoryBox.textAlign = "center";
+  categoryBox.padding = "1rem";
+  categoryBox.borderRadius = "5px";
+});
 
 const foodItems = document.querySelectorAll(".food-item");
-foodItems.forEach(item => {
-    item.style.marginTop = "1rem";
-})
+foodItems.forEach(({ style: item }) => {
+  item.marginTop = "1rem";
+  item.listStyle = "none";
+});
 
 // allergies section - add styling
 const allergySection = document.querySelector(".allergy-warning");
@@ -65,10 +66,14 @@ allergyList.style.width = "20rem";
 allergyList.style.listStyle = "none";
 allergyList.style.marginTop = "1rem";
 
-const allergyItems = document.querySelectorAll(".allergy-info:nth-child(2n)");
-allergyItems.forEach(item => {
-    item.style.backgroundColor = "skyblue";
-})
+const allergyItems = document.querySelectorAll(".allergy-info");
+allergyItems.forEach(({ style: item }, i) => {
+  if (i % 2 === 1) {
+    item.backgroundColor = "skyblue";
+  }
+  item.paddingLeft = "1rem";
+  item.lineHeight = "1.75";
+});
 
 //footer descriptions
 const footer = document.querySelector(".footer");
@@ -87,6 +92,4 @@ description.forEach(footerDesc => {
     desc.justifyContent = "center";
     desc.alignItems = "center";
     desc.margin = "1rem";
-})
-
-
+});
