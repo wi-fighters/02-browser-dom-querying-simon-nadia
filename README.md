@@ -14,11 +14,17 @@ In the repository, there is an `index.html` starting file which has the skeleton
 * Select the warning at the end of the page by its id `warning`. Select the id without using a querySelector. Change the size and font of the `warning`.
 * Select all _even_ `allergy-info` items. Give the even items a different background color.
 * Make the `allergy-warning` appear as a column in the center of the page.
-* The descriptions in the footer should also be styled, e.g. a rounded border with a background color. They should appear in a column for mobile and in a row for desktop. 
+* The descriptions in the footer should also be styled, e.g. a rounded border with a background color. They should appear in a column for mobile and in a row for desktop.
+
+**Images**:
+
+![alt text](./images/menu-mobile.png "Mobile Menu")
+
+![alt text](./images/menu-desktop.png "Mobile Menu")
 
 **Notes**:
 * Follow the instructions to create a menu. You can add any additional styling. 
-* Deadline: 2hrs
+* Deadline: 2hrs.
 * See reference images. 
 
 
