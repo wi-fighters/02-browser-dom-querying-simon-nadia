@@ -11,3 +11,14 @@ const category = document.querySelectorAll(".category").forEach(
     }
 )
 
+const colorGenerator = () => {
+    // loop 3x randomRGB
+    // push to array
+    //push opacity
+    // color = ([randomRGBx3, randomOpacity])
+
+    const randomRGB = Math.ceil(Math.random() * 255)
+    const randomOpacity = Math.random().toFixed(3)
+
+
+}
