@@ -23,7 +23,11 @@ const colorGenerator = (() => {
         rgba.push(randomRGB)
     }
     rgba.push(randomOpacity);
-
-
+    const foodCategory = document.querySelectorAll(".food-category").forEach(
+        function (foodCategory) {
+            foodCategory.style.backgroundColor = `rgba( ${rgba.toString()})`;
+        }
+    )
+    console.log("rgba: " + rgba.toString())
 
 })();
