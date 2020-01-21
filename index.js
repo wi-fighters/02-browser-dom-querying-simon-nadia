@@ -32,7 +32,7 @@ const colorInterval = setInterval(function () {
 }, 5000);
 
 const foodCategory = document.querySelectorAll(".food-category").forEach(function (el) {
-    el.style.width = 20 + "%"
+    el.style.width = 20 + "%";
 });
 const main = document.querySelector(".main");
 main.style.display = "flex";
@@ -47,10 +47,44 @@ const evenBGColor = (() => {
     const allergyInfo = document.querySelectorAll(".allergy-info");
     for (i = 0; i < allergyInfo.length; i++) {
         if ((i % 2) !== 0) {
-            allergyInfo[i].style.backgroundColor = "rgb(200,150,150)"
+            allergyInfo[i].style.backgroundColor = "rgb(200,150,150)";
         }
     }
 })();
 
 
-allergyInfo.style.backgroundColor 
+const allergyWarning = document.querySelector(".allergy-warning");
+allergyWarning.style.display = "flex";
+allergyWarning.style.flexFlow = "column";
+allergyWarning.style.alignItems = "center";
+
+const footer = document.querySelectorAll(".food-desc").forEach(
+    function (foodDesk) {
+        foodDesk.style.border = "1px";
+        foodDesk.style.border = "solid";
+        foodDesk.style.borderRadius = "5px";
+        foodDesk.style.minWidth = "100px";
+    }
+)
+
+const footerContainer = document.querySelector(".footer");
+footerContainer.style.display = "flex";
+
+
+
+const responsive = (mediaQuery) => {
+    if (mediaQuery.matches) {
+        footerContainer.style.flexFlow = "row";
+        footerContainer.style.justifyContent = "center";
+    } else {
+        footerContainer.style.flexFlow = "column";
+
+    }
+}
+
+const mediaQuery = window.matchMedia("(min-width: 768px)");
+responsive(mediaQuery);
+mediaQuery.addListener(responsive);
+
+
+
