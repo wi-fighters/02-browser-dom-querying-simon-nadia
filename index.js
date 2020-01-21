@@ -42,3 +42,15 @@ main.style.flexFlow = "wrap";
 const warning = document.getElementById("warning");
 warning.style.fontFamily = "Gothic";
 warning.style.fontSize = 2 + "rem";
+
+const evenBGColor = (() => {
+    const allergyInfo = document.querySelectorAll(".allergy-info");
+    for (i = 0; i < allergyInfo.length; i++) {
+        if ((i % 2) !== 0) {
+            allergyInfo[i].style.backgroundColor = "rgb(200,150,150)"
+        }
+    }
+})();
+
+
+allergyInfo.style.backgroundColor 
