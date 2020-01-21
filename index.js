@@ -29,5 +29,16 @@ const colorInterval = setInterval(function () {
             }
         );
     })();
-}, 50);
+}, 5000);
 
+const foodCategory = document.querySelectorAll(".food-category").forEach(function (el) {
+    el.style.width = 20 + "%"
+});
+const main = document.querySelector(".main");
+main.style.display = "flex";
+main.style.justifyContent = "space-evenly";
+main.style.flexFlow = "wrap";
+
+const warning = document.getElementById("warning");
+warning.style.fontFamily = "Gothic";
+warning.style.fontSize = 2 + "rem";
